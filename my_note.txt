@@ -1,0 +1,20 @@
+$ git clone https://github.com/scofieldhsu/android_MediaProvider.git
+
+$ git branch -a
+
+$ git checkout remotes/origin/marshmallow-release
+
+$ git status
+HEAD detached at origin/marshmallow-release
+nothing to commit, working directory clean
+
+$ git add xxx
+
+$ git commit -m '...'
+
+$ git push origin HEAD:marshmallow-release
+
+
+* https://github.com/scofieldhsu/android_MediaProvider/tree/marshmallow-release
+
+
