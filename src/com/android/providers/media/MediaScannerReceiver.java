@@ -58,6 +58,10 @@ public class MediaScannerReceiver extends BroadcastReceiver {
                 }
 
                 Log.d(TAG, "action: " + action + " path: " + path);
+		if ("android.intent.action.MEDIA_SCANNER_SCAN_DIR".equals(action)) {
+			// Scan external storage only
+			scan(context, MediaProvider.EXTERNAL_VOLUME);
+		} else
                 if (Intent.ACTION_MEDIA_MOUNTED.equals(action)) {
                     // scan whenever any volume is mounted
                     scan(context, MediaProvider.EXTERNAL_VOLUME);
